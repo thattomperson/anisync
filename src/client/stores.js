@@ -6,7 +6,7 @@ const namespace = window.location.pathname.replace(/\//g, '-').substr('1');
 
 const player = document.querySelector('video.vjs-tech');
 
-export const socket = io(`http://anisync.adl.cafe/${namespace}`);
+export const socket = io(`https://anisync.adl.cafe/${namespace}`);
 
 export const connected = readable(false, (set) => {
   set(socket.connected);
