@@ -25,6 +25,8 @@ RUN npm install --production
 
 COPY --from=builder --chown=node:node /home/node/app/build build
 
-EXPOSE 3000
+ENV HTTP_PORT 80
+
+EXPOSE 80
 
 CMD [ "node", "build/server.js" ]
