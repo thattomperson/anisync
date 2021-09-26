@@ -37,6 +37,10 @@
 </div>
 
 <style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
   :root {
     --toastContainerTop: auto;
     --toastContainerRight: 1rem;
@@ -57,8 +61,4 @@
     height: 100vh;
     background: linear-gradient(#181221, #020203);
   }
-
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
 </style>

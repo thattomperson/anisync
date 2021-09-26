@@ -12,36 +12,8 @@ import dotenv from 'dotenv'
 import pkg from './package.json';
 
 const isWatch = !!process.env.ROLLUP_WATCH;
-const isHot = isWatch;
 const isDev = isWatch;
 const isProduction = !isDev;
-
-function serve() {
-  let server;
-
-  function toExit() {
-    if (server) server.kill(0);
-  }
-
-  return {
-    writeBundle() {
-      if (server) toExit();
-
-      console.log('Starting server')
-      server = require('child_process').spawn(
-        'node', ['build/server.js'],
-        {
-          stdio: ['ignore', 'inherit', 'inherit'],
-          shell: true,
-          env: dotenv.config().parsed
-        }
-      );
-
-      process.on('SIGTERM', toExit);
-      process.on('exit', toExit);
-    },
-  };
-}
 
 export default [
   {
@@ -64,7 +36,7 @@ export default [
         sourceMap: isDev,
         inlineSources: isDev,
       }),
-      run({
+      isDev && run({
         options: {
           env: dotenv.config().parsed,
           stdio: 'inherit',
