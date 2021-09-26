@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true
+  },
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "include": ["src/**/*"],
+}

@@ -1,0 +1,41 @@
+{
+  "name": "anisync",
+  "version": "1.0.0",
+  "description": "",
+  "main": "rollup.config.js",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^20.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rollup/plugin-run": "^2.1.0",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "autoprefixer": "^10.3.5",
+    "dotenv": "^10.0.0",
+    "rollup": "^2.57.0",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "socket.io-client": "^4.2.0",
+    "svelte": "^3.43.0",
+    "svelte-preprocess": "^4.9.5",
+    "tailwindcss": "^2.2.15"
+  },
+  "dependencies": {
+    "@tsconfig/svelte": "^2.0.1",
+    "@zerodevx/svelte-toast": "^0.6.1",
+    "cuid": "^2.1.8",
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0",
+    "winston": "^3.3.3"
+  }
+}
