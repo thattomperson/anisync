@@ -1,5 +1,5 @@
-import client_config from './rollup.config.client'
-import server_config from './rollup.config.server'
+import client_config from './rollup.client.config'
+import server_config from './rollup.server.config'
 
 import pkg from './package.json';
 

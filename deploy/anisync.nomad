@@ -68,7 +68,7 @@ job "anisync" {
 
       # Configuration is specific to each driver.
       config {
-        image = "ghcr.io/thattomperson/anisync:v0.0.2"
+        image = "ghcr.io/thattomperson/anisync:main"
         ports = ["http"]
         force_pull = true
       }
