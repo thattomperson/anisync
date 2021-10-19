@@ -1,9 +1,15 @@
 module.exports = {
   mode: 'jit',
-  purge: ['./src/**/*.svelte'],
   darkMode: 'media',
+  theme: {
+    extend: {
+      colors: {
+        funimation: '#410099'
+      }
+    }
+  },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/line-clamp'),
   ],
-};
+}
